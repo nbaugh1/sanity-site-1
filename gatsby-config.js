@@ -16,6 +16,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: 'hzbt7pi2',
+        dataset: 'production',
+        watchMode: 'true',
+        overlayDraft: 'true',
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: 'skhfsIttG52qYl6aXXHe4EVLe8wkitvP9PIOksMY5wHLzxTNMLtAHKgmAuJtCeSHKuEo19LiYPqcfZHW4CH7oMnFCgIRGzjlKbn3UEtZViJWrtxTv6c8GSdPvIYTRzkyfXTEhVG1znQaOLB10FMLCPmkAknSQyv34Ch4k82ReTeNy8PiV1Of'
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
