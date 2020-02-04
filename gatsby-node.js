@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const path = require('path')
 
 // You can delete this file if you're not using it
 exports.createPages = async ({ actions, graphql }) => {
@@ -24,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
     posts.forEach(post => {
         actions.createPage({
             path: post.slug.current,
-            // template : 
+            component: path.resolve('./src/templates/post.js'),
             context: {
                 slug: post.slug.current
             }
