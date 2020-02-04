@@ -24,7 +24,7 @@ exports.createPages = async ({ actions, graphql }) => {
     posts.forEach(post => {
         actions.createPage({
             path: post.slug.current,
-            // template: 
+            // template : 
             context: {
                 slug: post.slug.current
             }
